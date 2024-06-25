@@ -1,0 +1,46 @@
+body {
+	background-color: #222;
+	margin-top: 250px;
+	margin-left: 60px;
+}
+h1 {
+	color: gray;
+	font-size: 130px;
+	font-family: Helvetica;
+	position: relative;
+}
+h1::after {
+	content: 'Welcome to Nike of China';
+	 color: transparent;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 clip-path: ellipse(200 200 at 0% 50%);
+	 animation: spotlight 5s infinite;
+	 background-image: url(img/jianbian.png);
+	 background-size: 150%;
+	 background-position:center;
+	 background-clip: text;
+}
+.img {
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	top: 300px;
+	left: 650px;
+	
+}
+@keyframes spotlight {
+	0% {
+		clip-path: ellipse(100px 100px at 0% 50%);
+	}
+	50% {
+		clip-path: ellipse(100px 100px at 100% 50%);
+	}
+	100% {
+		clip-path: ellipse(100px 100px at 0% 50%);
+	}
+}
+a {
+	text-decoration: none;
+}

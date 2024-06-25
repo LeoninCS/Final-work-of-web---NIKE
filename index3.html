@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>期末作业</title>
+		<style>
+		body {
+			width: 28%;
+			height: 500px;
+			margin-left: 35%;
+		}
+		
+		.logo1 {
+			width: 50px;
+			height: 50px;
+			background-image: url(img/nike.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 30px;
+			left: 595px;
+			background-size: 100% 100%;
+		}
+		.logo2 {
+			width: 40px;
+			height: 40px;
+			background-image: url(img/top1.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			top: 30px;
+			left: 650px;
+		}
+		.h {
+			position: relative;
+			margin-top: 80px;
+		}
+		.input {
+			width: 500px;
+			height: 60px;
+			border: 1px solid black;
+			border-radius: 10px 10px 10px 10px;
+			padding-left: 10px;
+			font-size: 30px;
+		}
+		input::placeholder {
+			font-size: 25px;
+		}
+		.check {
+			position: relative;
+			margin-top: 40px;
+			padding-left: 30px;
+		}
+		.check a {
+			color: black;
+			font-weight: 550;
+		}
+		#checkbox {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -2px;
+			left: 0px;
+		}
+		#btn {
+			width: 80px;
+			height: 45px;
+			border-radius: 30px 30px 30px 30px;
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			opacity: 1;
+		}
+		#btn:hover {
+			opacity: 0.5;
+			cursor: pointer;
+		}
+		.button1 {
+			position: relative;
+			top: 35px;
+			left: 430px;
+		}
+		</style>
+	</head>
+	<body>
+		<form action="">
+		<div class="logo1"></div>
+		<div class="logo2"></div>
+		<div class="h"><h1>输入你的手机号码加入或登录。</h1></div>
+		<div class="input1"><input type="text"/ class="input" placeholder="+86"></div>
+		<div class="check"><input type="checkbox" id="checkbox"/>我同意 Nike 的<a href="#">隐私政策</a>和<a href="#">使用条款</a>。</div>
+		<div class="button1"><button id="btn">继续</button></div>
+		</form>
+		<script>
+			var input = document.querySelector('.input');
+			var btn = document.querySelector('#btn');
+			var checkbox = document.querySelector('#checkbox');
+			var check = document.querySelector('.check');
+					
+			btn.onclick = function() {
+				event.preventDefault();
+				if(input.value.length!==11) {
+					alert("请输入正确的手机号码！");
+				}
+				else if (!checkbox.checked) {
+					alert("请同意隐私政策和使用条款！");
+				}
+				else {
+					alert("登录成功！");
+					window.location.href = "index2.html";
+					form.submit();
+				}
+			};
+		</script>
+	</body>
+</html>
